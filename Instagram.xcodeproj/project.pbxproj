@@ -11,6 +11,13 @@
 		E9BA84882B9D8A4600A59542 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA84872B9D8A4600A59542 /* ContentView.swift */; };
 		E9BA848A2B9D8A4C00A59542 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9BA84892B9D8A4C00A59542 /* Assets.xcassets */; };
 		E9BA848D2B9D8A4C00A59542 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9BA848C2B9D8A4C00A59542 /* Preview Assets.xcassets */; };
+		E9BA84A22B9D985200A59542 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA84A12B9D985200A59542 /* MainTabBar.swift */; };
+		E9BA84A42B9DBF1500A59542 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA84A32B9DBF1500A59542 /* ProfileView.swift */; };
+		E9BA84A72B9DDF9A00A59542 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA84A62B9DDF9A00A59542 /* UserStatView.swift */; };
+		E9BA84A92B9DEA1300A59542 /* storiesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA84A82B9DEA1300A59542 /* storiesSection.swift */; };
+		E9BA84AB2B9E152000A59542 /* CircleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA84AA2B9E152000A59542 /* CircleTest.swift */; };
+		E9BA84AD2B9E1F6B00A59542 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA84AC2B9E1F6B00A59542 /* FeedView.swift */; };
+		E9BA84AF2B9E1F7500A59542 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA84AE2B9E1F7500A59542 /* FeedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,13 @@
 		E9BA84872B9D8A4600A59542 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E9BA84892B9D8A4C00A59542 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9BA848C2B9D8A4C00A59542 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E9BA84A12B9D985200A59542 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		E9BA84A32B9DBF1500A59542 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		E9BA84A62B9DDF9A00A59542 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
+		E9BA84A82B9DEA1300A59542 /* storiesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storiesSection.swift; sourceTree = "<group>"; };
+		E9BA84AA2B9E152000A59542 /* CircleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTest.swift; sourceTree = "<group>"; };
+		E9BA84AC2B9E1F6B00A59542 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		E9BA84AE2B9E1F7500A59542 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +65,11 @@
 		E9BA84842B9D8A4600A59542 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
-				E9BA84852B9D8A4600A59542 /* InstagramApp.swift */,
+				E9BA84972B9D8A8700A59542 /* App */,
+				E9BA84962B9D8A8000A59542 /* Core */,
+				E9BA84952B9D8A8000A59542 /* Extensions */,
+				E9BA84942B9D8A7E00A59542 /* Model */,
+				E9BA84932B9D8A7B00A59542 /* Services */,
 				E9BA84872B9D8A4600A59542 /* ContentView.swift */,
 				E9BA84892B9D8A4C00A59542 /* Assets.xcassets */,
 				E9BA848B2B9D8A4C00A59542 /* Preview Content */,
@@ -65,6 +83,113 @@
 				E9BA848C2B9D8A4C00A59542 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E9BA84932B9D8A7B00A59542 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E9BA84942B9D8A7E00A59542 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E9BA84952B9D8A8000A59542 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		E9BA84962B9D8A8000A59542 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E9BA84A52B9DDF7F00A59542 /* Component */,
+				E9BA84982B9D8B2000A59542 /* Authentication */,
+				E9BA84992B9D8E1300A59542 /* Feed */,
+				E9BA849B2B9D8E6500A59542 /* Profile */,
+				E9BA849D2B9D8E7000A59542 /* Root */,
+				E9BA849E2B9D8E7D00A59542 /* Search */,
+				E9BA849F2B9D8ED300A59542 /* TabBar */,
+				E9BA84A02B9D8ED800A59542 /* UploadPost */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		E9BA84972B9D8A8700A59542 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E9BA84852B9D8A4600A59542 /* InstagramApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E9BA84982B9D8B2000A59542 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		E9BA84992B9D8E1300A59542 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				E9BA84A82B9DEA1300A59542 /* storiesSection.swift */,
+				E9BA84AA2B9E152000A59542 /* CircleTest.swift */,
+				E9BA84AC2B9E1F6B00A59542 /* FeedView.swift */,
+				E9BA84AE2B9E1F7500A59542 /* FeedCell.swift */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		E9BA849B2B9D8E6500A59542 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E9BA84A32B9DBF1500A59542 /* ProfileView.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		E9BA849D2B9D8E7000A59542 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Root;
+			sourceTree = "<group>";
+		};
+		E9BA849E2B9D8E7D00A59542 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		E9BA849F2B9D8ED300A59542 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				E9BA84A12B9D985200A59542 /* MainTabBar.swift */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		E9BA84A02B9D8ED800A59542 /* UploadPost */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = UploadPost;
+			sourceTree = "<group>";
+		};
+		E9BA84A52B9DDF7F00A59542 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				E9BA84A62B9DDF9A00A59542 /* UserStatView.swift */,
+			);
+			name = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +262,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9BA84AD2B9E1F6B00A59542 /* FeedView.swift in Sources */,
+				E9BA84A42B9DBF1500A59542 /* ProfileView.swift in Sources */,
+				E9BA84A22B9D985200A59542 /* MainTabBar.swift in Sources */,
 				E9BA84882B9D8A4600A59542 /* ContentView.swift in Sources */,
 				E9BA84862B9D8A4600A59542 /* InstagramApp.swift in Sources */,
+				E9BA84A72B9DDF9A00A59542 /* UserStatView.swift in Sources */,
+				E9BA84AB2B9E152000A59542 /* CircleTest.swift in Sources */,
+				E9BA84A92B9DEA1300A59542 /* storiesSection.swift in Sources */,
+				E9BA84AF2B9E1F7500A59542 /* FeedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
