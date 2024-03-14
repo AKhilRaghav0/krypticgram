@@ -15,17 +15,24 @@ struct FeedView: View {
                     ForEach(0 ... 10, id: \.self){ post in
                         FeedCell()
                     }
+                    
+                    
                 }
                 .padding(.top, 8)
             }
-            .navigationTitle("Feed")
+            .navigationTitle("Feeds")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Image("instagram")
-                        .renderingMode(.template)
-                        .resizable()
+//                    Image("instagram")
+//                        .renderingMode(.template)
+//                        .resizable()
+                    Text("Krypticgram")
+                        .font(.custom("VT323", size: 22))
                         .frame(width: 100, height: 82)
+                    
+                    
+                    
                     
                 }
                 ToolbarItem(placement: .topBarTrailing) {

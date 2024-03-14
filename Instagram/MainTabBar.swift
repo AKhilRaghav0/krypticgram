@@ -37,7 +37,7 @@ struct MainTabBar: View {
                         .clipShape(Circle())
                 }
         }
-        .accentColor(.black)
+        .accentColor(Color.bg1)
     }
 }
 

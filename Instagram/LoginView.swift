@@ -18,7 +18,7 @@ struct LoginView: View {
                     .renderingMode(.template)
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 220, height: 100)
+                    .frame(width: 280, height: 200)
                 
                 // TextFields
                 
@@ -57,10 +57,10 @@ struct LoginView: View {
                     Text("Login")
                         .font(.subheadline)
                         .fontWeight(.semibold)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(Color.bgI)
                         
                         .frame(width: 360, height: 44)
-                        .background(Color(.systemBlue))
+                        .background(Color.bg1)
                         .cornerRadius(8)
                         
 //                        .padding(.top)
@@ -72,41 +72,56 @@ struct LoginView: View {
 //                .buttonBorderShape(.roundedRectangle)
                 
                 HStack {
-                    RoundedRectangle(cornerRadius: 1)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 0.4)
-                        .foregroundStyle(Color.gray)
-//                        .foregroundStyle(Color(.systemGray6))
-                        .padding(.horizontal)
-                    Text("OR")
-                        .font(.system(size: 16, weight: .semibold, design: .rounded))
-                        .foregroundStyle(Color.gray)
-                    RoundedRectangle(cornerRadius: 1)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 0.4)
-                        .foregroundStyle(Color.gray)
+                    
+                    Rectangle()
+                        .frame(width: UIScreen.main.bounds.width / 2 - 40, height: 0.5)
                         
-                        .padding(.horizontal)
+                    Text("OR")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                    Rectangle()
+                        .frame(width: UIScreen.main.bounds.width / 2 - 40, height: 0.5)
+                        
+                    
+//                    RoundedRectangle(cornerRadius: 1)
+//                        .frame(maxWidth: .infinity)
+//                        .frame(height: 0.4)
+//                        .foregroundStyle(Color.gray)
+////                        .foregroundStyle(Color(.systemGray6))
+//                        .padding(.horizontal)
+//                    Text("OR")
+//                        .font(.system(size: 16, weight: .semibold, design: .rounded))
+//                        .foregroundStyle(Color.gray)
+//                    RoundedRectangle(cornerRadius: 1)
+//                        .frame(maxWidth: .infinity)
+//                        .frame(height: 0.4)
+//                        .foregroundStyle(Color.gray)
+//                        
+//                        .padding(.horizontal)
                     
                     
                 }
+                .foregroundColor(.gray)
                 .padding(.vertical)
                 
-                Button(action: {
-                    print("Don't have an account?")
-                }) {
+                
+                
+                NavigationLink(destination: Text("SignUP")) {
                     HStack {
-                        Text("Don't have an account?")
-                            .font(.footnote)
-                        Text("Sign Up")
+                        Text("Don't have an account ?")
                             .font(.footnote)
                             .fontWeight(.semibold)
+                        Text("Sign Up")
+                            .font(.footnote)
+                            .fontWeight(.bold)
 //                            .background(Color(.systemBlue))
 //                            .bold()
 //                            .padding(.top)
                     }
-                    .padding(.trailing, 28)
                 }
+                
+                
+                
 
                
             }

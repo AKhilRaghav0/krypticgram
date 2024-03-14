@@ -18,9 +18,18 @@ struct FeedCell: View {
                     .frame(width: 40, height: 40)
                     .clipShape(Circle())
                 
-                Text("Saad Salim")
-                    .font(.footnote)
+                VStack (alignment: .leading){
+                    Text("Akhil Raghav")
+                        .font(.footnote)
+                        .font(.system(size: 17))
                     .fontWeight(.semibold)
+                    
+                    Text("@krypticBit")
+                        .font(.system(size: 11))
+//                        .font(.callout)
+                        
+                        .foregroundStyle(Color.gray)
+                }
                 
                 Spacer()
                 
@@ -92,9 +101,9 @@ struct FeedCell: View {
             //Caption Label
             
             HStack {
-                Text("Saad ").fontWeight(.semibold)
+                Text("Raghav ").fontWeight(.semibold)
                     +
-                Text("This is some sort of Caption")
+                Text("Not really trying to write some Captions with mojis 🤨")
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .font(.footnote)
