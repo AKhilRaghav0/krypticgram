@@ -12,7 +12,7 @@ struct FeedCell: View {
         VStack() {
             //Image + username
             HStack {
-                Image("halo-1")
+                Image("halo-4")
                     .resizable()
                     .scaledToFill()
                     .frame(width: 40, height: 40)
@@ -79,12 +79,39 @@ struct FeedCell: View {
             .padding(.top, 4)
             .accentColor(Color.bg1)
             
-            //Likes label
+            //Likes label(
             Text("89 Likes")
-                .bold()
+                .font(.footnote)
+                .fontWeight(.semibold)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 10)
+                .padding(.top, 1)
+            
             
             
             //Caption Label
+            
+            HStack {
+                Text("Saad ").fontWeight(.semibold)
+                    +
+                Text("This is some sort of Caption")
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .font(.footnote)
+            .padding(.leading, 10)
+            .padding(.top, 0.5)
+            
+            
+            //TimeStamp
+            
+            Text("89 Likes")
+                .font(.footnote)
+//                .fontWeight(.semibold)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 10)
+                .padding(.top, 1)
+                .foregroundStyle(.gray)
+            
         }
     }
 }
