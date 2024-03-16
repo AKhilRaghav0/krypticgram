@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		E9514C2A2BA1D67800DE6730 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9514C292BA1D67800DE6730 /* SearchView.swift */; };
+		E98910CF2BA508B800ACC27F /* IGTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98910CE2BA508B800ACC27F /* IGTextFieldModifier.swift */; };
+		E98910D12BA50A3000ACC27F /* IGButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98910D02BA50A3000ACC27F /* IGButtonModifier.swift */; };
+		E98910D32BA50AED00ACC27F /* CreateUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98910D22BA50AED00ACC27F /* CreateUsernameView.swift */; };
+		E98910D52BA515E800ACC27F /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98910D42BA515E700ACC27F /* CreatePasswordView.swift */; };
+		E98910D72BA5184100ACC27F /* CompleteSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98910D62BA5184100ACC27F /* CompleteSignUpView.swift */; };
+		E98910D92BA51E9500ACC27F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98910D82BA51E9500ACC27F /* User.swift */; };
 		E9A2E9672BA378CF00BE1A17 /* VT323.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9A2E9662BA378CE00BE1A17 /* VT323.ttf */; };
 		E9A2E9692BA378DE00BE1A17 /* Fira Sans Extra Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9A2E9682BA378DE00BE1A17 /* Fira Sans Extra Condensed.ttf */; };
 		E9A2E96B2BA384A400BE1A17 /* addEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A2E96A2BA384A400BE1A17 /* addEmailView.swift */; };
@@ -27,6 +33,12 @@
 
 /* Begin PBXFileReference section */
 		E9514C292BA1D67800DE6730 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		E98910CE2BA508B800ACC27F /* IGTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGTextFieldModifier.swift; sourceTree = "<group>"; };
+		E98910D02BA50A3000ACC27F /* IGButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGButtonModifier.swift; sourceTree = "<group>"; };
+		E98910D22BA50AED00ACC27F /* CreateUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameView.swift; sourceTree = "<group>"; };
+		E98910D42BA515E700ACC27F /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
+		E98910D62BA5184100ACC27F /* CompleteSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUpView.swift; sourceTree = "<group>"; };
+		E98910D82BA51E9500ACC27F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = Instagram/User.swift; sourceTree = SOURCE_ROOT; };
 		E9A2E95C2BA356D400BE1A17 /* Fira Sans Extra Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Fira Sans Extra Condensed.ttf"; path = "../../../../Downloads/krypticgram-brand-zip-file/fonts/Fira Sans Extra Condensed.ttf"; sourceTree = "<group>"; };
 		E9A2E9632BA3581E00BE1A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E9A2E9662BA378CE00BE1A17 /* VT323.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VT323.ttf; sourceTree = "<group>"; };
@@ -118,6 +130,7 @@
 		E9BA84942B9D8A7E00A59542 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E98910D82BA51E9500ACC27F /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,6 +170,9 @@
 			children = (
 				E9DECDFA2BA3050B00DE6897 /* LoginView.swift */,
 				E9A2E96A2BA384A400BE1A17 /* addEmailView.swift */,
+				E98910D22BA50AED00ACC27F /* CreateUsernameView.swift */,
+				E98910D42BA515E700ACC27F /* CreatePasswordView.swift */,
+				E98910D62BA5184100ACC27F /* CompleteSignUpView.swift */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";
@@ -215,6 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				E9BA84A62B9DDF9A00A59542 /* UserStatView.swift */,
+				E98910CE2BA508B800ACC27F /* IGTextFieldModifier.swift */,
+				E98910D02BA50A3000ACC27F /* IGButtonModifier.swift */,
 			);
 			name = Component;
 			sourceTree = "<group>";
@@ -296,12 +314,18 @@
 				E9BA84AD2B9E1F6B00A59542 /* FeedView.swift in Sources */,
 				E9BA84A42B9DBF1500A59542 /* ProfileView.swift in Sources */,
 				E9BA84A22B9D985200A59542 /* MainTabBar.swift in Sources */,
+				E98910D52BA515E800ACC27F /* CreatePasswordView.swift in Sources */,
+				E98910CF2BA508B800ACC27F /* IGTextFieldModifier.swift in Sources */,
+				E98910D32BA50AED00ACC27F /* CreateUsernameView.swift in Sources */,
+				E98910D12BA50A3000ACC27F /* IGButtonModifier.swift in Sources */,
 				E9BA84882B9D8A4600A59542 /* ContentView.swift in Sources */,
 				E9BA84862B9D8A4600A59542 /* InstagramApp.swift in Sources */,
 				E9BA84A72B9DDF9A00A59542 /* UserStatView.swift in Sources */,
 				E9BA84AB2B9E152000A59542 /* CircleTest.swift in Sources */,
 				E9DECDFB2BA3050B00DE6897 /* LoginView.swift in Sources */,
+				E98910D92BA51E9500ACC27F /* User.swift in Sources */,
 				E9BA84A92B9DEA1300A59542 /* storiesSection.swift in Sources */,
+				E98910D72BA5184100ACC27F /* CompleteSignUpView.swift in Sources */,
 				E9BA84AF2B9E1F7500A59542 /* FeedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

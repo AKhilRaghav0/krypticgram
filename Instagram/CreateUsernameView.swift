@@ -1,47 +1,47 @@
 //
-//  addEmailView.swift
+//  CreateUsernameView.swift
 //  Instagram
 //
-//  Created by akhil on 14/03/24.
+//  Created by akhil on 15/03/24.
 //
 
 import SwiftUI
 
-struct addEmailView: View {
-    @State private var email: String = ""
+struct CreateUsernameView: View {
+    @State private var username: String = ""
     @Environment(\.dismiss) var dismiss
     var body: some View {
-        VStack (spacing: 12){
-            Text("Add your Email")
+        VStack {
+            Text("Create Username")
                 .font(.custom("VT323", size: 37))
                 .fontWeight(.bold)
                 .padding(.top)
             
-            Text("You will use this email to sign in to your account")
+            Text("Pick a username for your new account. You can always change it later.")
                 .font(.headline)
                 .foregroundStyle(.gray)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
             
             
-            TextField("Email", text: $email)
+            TextField("Username", text: $username)
                 .autocapitalization(.none)
                 .modifier(IGTextFieldModifier())
                 .padding(.top)
             
             NavigationLink{
-                CreateUsernameView()
+                CreatePasswordView()
                     .navigationBarBackButtonHidden(true)
             } label : {
-                Text("Login")
+                Text("Next")
                     .modifier(IGButtonModifier())
             }
             .padding(.vertical)
-                        
-           
+            .padding(.vertical)
           Spacer()
             
-        }.toolbar(content: {
+        }
+        .toolbar(content: {
             ToolbarItem(placement: .navigationBarLeading) {
                 Image(systemName: "chevron.left")
                     .imageScale(.large)
@@ -55,5 +55,5 @@ struct addEmailView: View {
 }
 
 #Preview {
-    addEmailView()
+    CreateUsernameView()
 }

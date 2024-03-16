@@ -25,18 +25,10 @@ struct LoginView: View {
                 VStack {
                     TextField("Enter your Username", text: $email)
                         .autocapitalization(.none)
-                        .font(.subheadline)
-                        .padding(12)
-                        .background(Color(.systemGray6))
-                        .cornerRadius(10)
-                        .padding(.horizontal, 24)
+                        .modifier(IGTextFieldModifier())
+                       
                     SecureField("Password", text: $password)
-                        .autocapitalization(.none)
-                        .font(.subheadline)
-                        .padding(12)
-                        .background(Color(.systemGray6))
-                        .cornerRadius(10)
-                        .padding(.horizontal, 24)
+                        .modifier(IGTextFieldModifier())
                     
                 }
                 Button(action: {
@@ -55,13 +47,7 @@ struct LoginView: View {
                     print("Login")
                 }, label: {
                     Text("Login")
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
-                        .foregroundStyle(Color.bgI)
-                        
-                        .frame(width: 360, height: 44)
-                        .background(Color.bg1)
-                        .cornerRadius(8)
+                        .modifier(IGButtonModifier())
                         
 //                        .padding(.top)
 //                        .padding(.trailing, 28)
@@ -106,19 +92,23 @@ struct LoginView: View {
                 
                 
                 
-                NavigationLink(destination: Text("SignUP")) {
+                NavigationLink{
+                    addEmailView()
+                        .navigationBarBackButtonHidden(true)
+                } label:  {
                     HStack {
                         Text("Don't have an account ?")
-                            .font(.footnote)
                             .fontWeight(.semibold)
+                        
                         Text("Sign Up")
-                            .font(.footnote)
                             .fontWeight(.bold)
-//                            .background(Color(.systemBlue))
-//                            .bold()
-//                            .padding(.top)
                     }
+                    .font(.footnote)
+                    
                 }
+                .padding(.vertical, 16)
+                
+              
                 
                 
                 
