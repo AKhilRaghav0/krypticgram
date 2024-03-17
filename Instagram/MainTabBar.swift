@@ -20,17 +20,17 @@ struct MainTabBar: View {
                     Image(systemName: "magnifyingglass")
                 }
             
-            Text("Upload Post")
+            uploadPostView()
                 .tabItem {
-                    Image(systemName: "plus.app.fill")
+                    Image(systemName: "video.and.waveform")
                 }
             
-            Text("Notification")
+            Text("Tinder Swap Section")
                 .tabItem {
-                    Image(systemName: "heart")
+                    Image(systemName: "flame")
                 }
             
-            CurrentUserProfileView()
+            CurrentUserProfileView(user: User.MOCK_USERS[1])
                 .tabItem {
                    Image(systemName: "person")
                         

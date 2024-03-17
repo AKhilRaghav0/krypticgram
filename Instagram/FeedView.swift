@@ -11,9 +11,10 @@ struct FeedView: View {
     var body: some View {
         NavigationStack  {
             ScrollView {
+//                StoryView(post: Post.MOCK_POSTS[1])
                 LazyVStack(spacing: 32) {
-                    ForEach(0 ... 10, id: \.self){ post in
-                        FeedCell()
+                    ForEach(Post.MOCK_POSTS){ post in
+                        FeedCell(post: post)
                     }
                     
                     
@@ -24,9 +25,9 @@ struct FeedView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-//                    Image("instagram")
-//                        .renderingMode(.template)
-//                        .resizable()
+                    //                    Image("instagram")
+                    //                        .renderingMode(.template)
+                    //                        .resizable()
                     Text("Krypticgram")
                         .font(.custom("VT323", size: 22))
                         .frame(width: 100, height: 82)
@@ -36,15 +37,32 @@ struct FeedView: View {
                     
                 }
                 ToolbarItem(placement: .topBarTrailing) {
+                    
+                    NavigationLink(destination: uploadPostView()) {
+                            Image(systemName: "plus.app")
+                                .imageScale(.large)
+                        }
+                    
+//                    Button {
+//                        
+//                    } label: {
+//                        Image(systemName: "plus.app")
+//                            .imageScale(.large)
+//                    }
+                }
+                ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         
                     } label: {
                         Image(systemName: "paperplane")
                             .imageScale(.large)
                     }
-
+                    
                 }
-
+                
+                
+                
+                
             }
         }
     }

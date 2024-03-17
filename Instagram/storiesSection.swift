@@ -3,6 +3,7 @@ import SwiftUI
 struct StoryView: View {
     @State private var isAnimating: Bool = false
     @State private var rotationAngle: Double = 0
+    let post: Post
 
     var body: some View {
         ZStack {
@@ -23,10 +24,14 @@ struct StoryView: View {
                     self.rotationAngle = 270
                 }
 
-            Image("pfp")
-                .resizable()
-                .frame(width: 70, height: 70)
-                .clipShape(Circle())
+            
+            ForEach(User.MOCK_USERS){ user in
+                Image(user.profileImageURL ?? "")
+                    .resizable()
+                    .frame(width: 70, height: 70)
+                    .clipShape(Circle())
+            }
+            
         }
         .onTapGesture {
             withAnimation {
@@ -43,7 +48,7 @@ struct StoriesSection: View {
         ScrollView(.horizontal){
             HStack {
                 ForEach(0..<10) { _ in
-                    StoryView()
+                    StoryView(post: Post.MOCK_POSTS[0])
                         .onTapGesture {
                             withAnimation {
                                 self.isAnimating.toggle()

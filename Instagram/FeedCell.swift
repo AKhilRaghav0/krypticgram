@@ -8,27 +8,32 @@
 import SwiftUI
 
 struct FeedCell: View {
+    let post: Post
     var body: some View {
         VStack() {
             //Image + username
             HStack {
-                Image("halo-4")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 40, height: 40)
-                    .clipShape(Circle())
-                
-                VStack (alignment: .leading){
-                    Text("Akhil Raghav")
-                        .font(.footnote)
-                        .font(.system(size: 17))
-                    .fontWeight(.semibold)
+                if let user = post.user {
+                    Image(user.profileImageURL ?? "")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 40, height: 40)
+                        .clipShape(Circle())
                     
-                    Text("@krypticBit")
-                        .font(.system(size: 11))
-//                        .font(.callout)
+                    VStack (alignment: .leading){
+                        Text(user.username)
+                            .font(.footnote)
+                            .font(.system(size: 17))
+                        .fontWeight(.semibold)
                         
-                        .foregroundStyle(Color.gray)
+                        Text(user.fullname ?? "")
+                            .font(.system(size: 11))
+    //                        .font(.callout)
+                            
+                            .foregroundStyle(Color.gray)
+                    
+                }
+                
                 }
                 
                 Spacer()
@@ -44,7 +49,7 @@ struct FeedCell: View {
             }
             .padding(.leading, 8)
             //Post Image
-            Image("halo-1")
+            Image(post.imageUrl)
                 .resizable()
                 .scaledToFill()
                 .frame(height: 400)
@@ -89,7 +94,7 @@ struct FeedCell: View {
             .accentColor(Color.bg1)
             
             //Likes label(
-            Text("89 Likes")
+            Text("\(post.likes) Likes")
                 .font(.footnote)
                 .fontWeight(.semibold)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -101,9 +106,10 @@ struct FeedCell: View {
             //Caption Label
             
             HStack {
-                Text("Raghav ").fontWeight(.semibold)
+                Text(post.user?.fullname ?? " ") .fontWeight(.semibold)
+                Text("")
                     +
-                Text("Not really trying to write some Captions with mojis 🤨")
+                Text(post.caption)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .font(.footnote)
@@ -113,7 +119,7 @@ struct FeedCell: View {
             
             //TimeStamp
             
-            Text("89 Likes")
+            Text("\(post.likes) likes")
                 .font(.footnote)
 //                .fontWeight(.semibold)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -126,5 +132,5 @@ struct FeedCell: View {
 }
 
 #Preview {
-    FeedCell()
+    FeedCell(post: Post.MOCK_POSTS[0])
 }
