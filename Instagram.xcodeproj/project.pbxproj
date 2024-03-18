@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E9514C2A2BA1D67800DE6730 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9514C292BA1D67800DE6730 /* SearchView.swift */; };
+		E96B4D322BA82F7E00C02D07 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96B4D312BA82F7E00C02D07 /* UploadPostViewModel.swift */; };
 		E977D1E82BA724A300B135CD /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E977D1E72BA724A300B135CD /* Launch Screen.storyboard */; };
 		E98910CF2BA508B800ACC27F /* IGTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98910CE2BA508B800ACC27F /* IGTextFieldModifier.swift */; };
 		E98910D12BA50A3000ACC27F /* IGButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98910D02BA50A3000ACC27F /* IGButtonModifier.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		E9514C292BA1D67800DE6730 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		E96B4D312BA82F7E00C02D07 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
 		E977D1E72BA724A300B135CD /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E98910CE2BA508B800ACC27F /* IGTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGTextFieldModifier.swift; sourceTree = "<group>"; };
 		E98910D02BA50A3000ACC27F /* IGButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGButtonModifier.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				E9B279692BA6DAC600F360FD /* uploadPostView.swift */,
+				E96B4D312BA82F7E00C02D07 /* UploadPostViewModel.swift */,
 			);
 			name = UploadPost;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				E98910D32BA50AED00ACC27F /* CreateUsernameView.swift in Sources */,
 				E98910D12BA50A3000ACC27F /* IGButtonModifier.swift in Sources */,
 				E9BA84882B9D8A4600A59542 /* ContentView.swift in Sources */,
+				E96B4D322BA82F7E00C02D07 /* UploadPostViewModel.swift in Sources */,
 				E9B279662BA6B51E00F360FD /* PostGridView.swift in Sources */,
 				E9BA84862B9D8A4600A59542 /* InstagramApp.swift in Sources */,
 				E9B279682BA6BDAD00F360FD /* ProfileHeaderView.swift in Sources */,

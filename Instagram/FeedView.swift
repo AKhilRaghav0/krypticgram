@@ -8,65 +8,43 @@
 import SwiftUI
 
 struct FeedView: View {
+//    @Binding var tabIndex: Int
     var body: some View {
-        NavigationStack  {
+        NavigationView {
             ScrollView {
-//                StoryView(post: Post.MOCK_POSTS[1])
                 LazyVStack(spacing: 32) {
                     ForEach(Post.MOCK_POSTS){ post in
                         FeedCell(post: post)
                     }
-                    
-                    
                 }
                 .padding(.top, 8)
             }
             .navigationTitle("Feeds")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    //                    Image("instagram")
-                    //                        .renderingMode(.template)
-                    //                        .resizable()
+                ToolbarItem(placement: .navigationBarLeading) {
                     Text("Krypticgram")
                         .font(.custom("VT323", size: 22))
-                        .frame(width: 100, height: 82)
-                    
-                    
-                    
-                    
                 }
-                ToolbarItem(placement: .topBarTrailing) {
-                    
-                    NavigationLink(destination: uploadPostView()) {
-                            Image(systemName: "plus.app")
-                                .imageScale(.large)
-                        }
-                    
-//                    Button {
-//                        
-//                    } label: {
-//                        Image(systemName: "plus.app")
-//                            .imageScale(.large)
-//                    }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: Text("Reels Section Soon")) {
+                        Image(systemName: "video.badge.waveform")
+                            .imageScale(.large)
+                    }
                 }
-                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        
+                        // Action for the button
                     } label: {
                         Image(systemName: "paperplane")
                             .imageScale(.large)
                     }
-                    
                 }
-                
-                
-                
-                
             }
         }
     }
 }
+
 
 #Preview {
     FeedView()

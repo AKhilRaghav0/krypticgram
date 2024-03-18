@@ -11,7 +11,8 @@ import PhotosUI
 struct uploadPostView: View {
     @State private var caption: String = ""
     @State private var imagePickerPresented: Bool = false
-    @State private var photoItem: PhotosPickerItem?
+    @Binding var tabIndex: Int
+    @StateObject var viewModel = UploadPostViewModel()
     var body: some View {
         VStack {
             
@@ -19,7 +20,10 @@ struct uploadPostView: View {
             
             HStack {
                 Button(action: {
-                    
+                    caption = ""
+                    viewModel.postImage = nil
+                    viewModel.selectedImage = nil
+                    tabIndex = 0
                 }, label: {
                     Text("Cancel")
                 })
@@ -41,24 +45,30 @@ struct uploadPostView: View {
             //Post Image and Caption
             
             HStack {
-                Image("halo-2")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 100, height: 100)
-                    .clipped()
+                if let image = viewModel.postImage {
+                    image
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 100, height: 100)
+                        .clipped()
+                        .cornerRadius(10)
+                        .padding()
+                }
+               
                 
                 TextField("Enter your Captions", text: $caption, axis: .vertical)
             }
             
             Spacer()
         }
+        .navigationBarBackButtonHidden(true)
         .onAppear{
             imagePickerPresented.toggle()
         }
-        .photosPicker(isPresented: $imagePickerPresented, selection: $photoItem)
+        .photosPicker(isPresented: $imagePickerPresented, selection: $viewModel.selectedImage)
     }
 }
 
 #Preview {
-    uploadPostView()
+    uploadPostView(tabIndex: .constant(0))
 }
