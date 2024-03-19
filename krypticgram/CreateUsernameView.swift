@@ -27,6 +27,7 @@ struct CreateUsernameView: View {
             TextField("Username", text: $username)
                 .autocapitalization(.none)
                 .modifier(IGTextFieldModifier())
+            
                 .padding(.top)
             
             NavigationLink{
